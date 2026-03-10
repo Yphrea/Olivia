@@ -3,11 +3,21 @@ from latexWrapper import *
 
 myCollection = spellCollection.from_yaml("Olivia_spells.yaml")
 
-for i, item in enumerate(myCollection.tomes):
-    print(item.to_tikz())
+#for i, item in enumerate(myCollection.tomes):
+#    print(item.to_tikz())
 
 OliviaTex = latexDocument('Olivia.tex')
-OliviTex.add_content('\\section*{{Tomes}}\n')
-OliviaTex.add_content(latexEnvironment('multicols', requires='2'))
-OliviaTex.add_content(latexEnvironment)
+OliviaTex.addContent("""\\section*{Tomes}\n
+\\small\n""")
+tomeMulticol = latexEnvironment('multicols*', required='2')
+OliviaTex.addContent(tomeMulticol, setParent=True)
+for i, item in enumerate(myCollection.tomes):
+    tikz = latexEnvironment('tikzpicture')
+    tikz.addContent(item.toTikz())
+    tomeMulticol.addContent(tikz, setParent=True)
+
+OliviaTex.addContent("\\normalfont\n")
+print(OliviaTex)
+OliviaTex.write()
+
 

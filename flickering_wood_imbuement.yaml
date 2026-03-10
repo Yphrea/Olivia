@@ -1,0 +1,15 @@
+tomes:
+  - title: flickering wood imbuement
+    difficulty: 6
+    mana: 180
+    description: |
+      Imbue an orange crystal with the wood element
+    tags:
+      - wood
+  - title: dim wood imbuement
+    difficulty: 2
+    mana: 30
+    description: |
+      Imbue a red crystal with the wood element
+    tags:
+      - wood

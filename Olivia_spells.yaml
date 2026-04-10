@@ -120,18 +120,24 @@ tomes:
   - title: shadow fist
     difficulty: 5
     mana: 30
-    description: |
-      Punches target 4 times for 20 damage
     damage: $4 \times 20$
-    range: short
+    power: 20
+    accuracy: 10
+    breakthrough: +5
+    range: short 
+    description: |
+      An onslaught of hard-to-detect fists
+    damage: $4 \times 20$
     tags:
+      - dark
 
   - title: make snow
     difficulty: 1
-    mana: '?'
+    mana: 10
     description: |
-    
+      Create a handful of snow
     tags:
+      - ice (100)
 
   - title: conjure water
     difficulty: 1
@@ -183,3 +189,277 @@ spellpages:
       Imbue a red crystal with the water element
     tags:
       - water
+
+  - title: illusion bullet
+    difficulty: 1
+    mana: 5
+    power: 80
+    accuracy: 15
+    damage: 10
+    range: long
+    description: |
+      Shoots illusory bullets
+    tags:
+       - illusion
+
+  - title: Barrier
+    difficulty: 2
+    mana: 50
+    description: |
+      Barrier with 100 HP towards adjacent tile
+    tags:
+    
+  - title: Shine
+    difficulty: 3
+    mana: 40
+    power: 60
+    accuracy: 12
+    damage: 60
+    range: 
+    description: |
+    
+    tags:
+      - light
+
+  - title: Confuse Ray
+    difficulty: 3
+    mana: 50
+    description: |
+       Targeted creature chooses their target on random/proximity ('?')
+    tags:
+
+  - title: Shining blood imbuement
+    difficulty: 6
+    mana: '?'
+    description: |
+    
+    tags:
+
+  - title: Seiken
+    difficulty: 5
+    mana: 50
+    damage: 60
+    power: 80
+    accuracy: 90
+    description: |
+      Creates a sword of light
+    tags:
+     - light
+
+  - title: Shining wood imbuement
+    difficulty: 6
+    mana: 
+    description: |
+       Imbues a yellow crystal with the element of wood
+    tags:
+      - wood
+
+  - title: Astral Berrage
+    difficulty: 7
+    mana: 700
+    range: far
+    description: |
+      Showers every target in targeted tile for 100 HP
+    tags:
+      - astral
+
+  - title: Mend severe laceration
+    difficulty: too hard
+    mana: '?'
+    description: |
+    
+    tags:
+
+  - title: Thunder
+    difficulty: 8
+    mana: 360
+    range: long
+    description: |
+      Thunder cloud emitts three lightning bolts at random targets ('?')
+    tags:
+      - electric
+
+  - title: Lycky star
+    difficulty: 3
+    mana: 20
+    damage: $5 \times \mathrm{d}20$
+    power: $5 \times \mathrm{d}20$
+    accuracy: 10'%'
+    range: medium
+    description: |
+    
+    tags:
+      - astral
+
+  - title: Douse
+    difficulty: 1
+    mana: 15
+    description: |
+      Drenches target with water
+    tags:
+
+  - title: Tulip bouqet
+    difficulty: 1('?')
+    mana: '?'
+    description: |
+      Conjures a bouqet of tulips
+    tags:
+
+  - title: Cosmic grace
+    difficulty: 5
+    mana: 60
+    description: |
+      Buffs allies in tile
+    tags:
+
+  - title: Arcane missile
+    difficulty: 4
+    mana: 40
+    power: 60
+    accuracy: 10
+    damage: 40
+    description: |
+      Non-elemental projectile spell    
+    tags:
+      - non-elemental
+
+  - title: Mana flush
+    difficulty: 4
+    mana: 40
+    range: medium
+    description: |
+      Damages up to 50 mana
+    tags:
+      - water
+
+  - title: Dim ice imbuement
+    difficulty: 2
+    mana: 20
+    description: |
+      Imbues a red crystal with the element of ice
+    tags:
+
+  - title: Erase color
+    difficulty: 5
+    mana: 90
+    description: |
+      Removes color tag of item
+    tags:
+      - dark
+
+  - title: Conjure water
+    difficulty: 1
+    mana: 30
+    description: |
+      Conjures one litre of water
+    tags:
+
+  - title: Shining dark imbuement
+    difficulty: 6
+    mana: 180
+    description: |
+      Imbues a yellow crystal with the element of darkness
+    tags:
+      - dark
+      
+  - title: Shining astral imbuement
+    difficulty: 6
+    mana: 180
+    description: |
+      Imbues a yellow crystal with the astral element
+    tags:
+      - astral
+
+  - title: Flickering astral imbuement
+    difficulty: 4
+    mana: '?'
+    description: |
+      Imbues an orange crystal with the astral element
+    tags:
+      - astral
+
+  - title: Shining electric imbuement
+    difficulty: 6
+    mana: 180
+    description: |
+      Imbues a yellow crystal with the element of electricity
+    tags:
+      - electric
+
+  - title: dim water imbuement
+    difficulty: 2
+    mana: '?'
+    description: |
+      Imbues a red crystal with the element of water
+    tags:
+      - water
+      
+  - title: Mend moderate laceration
+    difficulty: 4
+    mana: 50
+    description: |
+      
+    tags:
+
+  - title: Dark wave
+    difficulty: 10
+    description: |
+    
+    tags:
+
+  - title: Illusion stream
+    difficulty: 2
+    mana: 20
+    damage: $4 \times 10$
+    power: 80
+    accuracy: 15
+    range: long
+    description: |
+      Sends 4 illusion bullets at target
+    tags:
+      - illusion
+
+  - title: Mend moderate fracture
+    difficulty: 4
+    mana: 50
+    range: close
+    heal: 20 lu
+    description: |
+      Heal minor and moderate bone injury
+    tags:
+      - blood (100)
+      - light (50)
+
+  - title: Illusory chain
+    difficulty: 9
+    mana: 25
+    range: long
+    description: |
+      Launch a chain with 20 hp that may snare target. Lasts for 5 turns
+    tags:
+      - illusion
+
+  - title: Thunderstorm
+    difficulty: 11
+    mana: 2500
+    damage: 100
+    power: 120
+    accuracy: 14
+    range: very long
+    description: |
+      Create thunderclouds at 1 altitude at targeted+adjacent tiles that strikes target tile with 6 bolts, adjacent with 3 each and increase windspeed by 6 (max 15).
+    tags:
+      - electricity (100)
+      - kinetic (50)
+
+  - title: Heal
+    difficulty: 3
+    mana: 30
+    range: close
+    description: |
+      Heals target for 30 hp
+    tags:
+      - blood
+
+
+

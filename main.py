@@ -8,8 +8,8 @@ myCollection = spellCollection.from_yaml("Olivia_spells.yaml")
 
 OliviaTex = latexDocument('Olivia.tex')
 OliviaTex.addContent("""\\section*{Tomes}\n
-\\small\n""")
-tomeMulticol = latexEnvironment('multicols*', required='2')
+\\scriptsize\n""")
+tomeMulticol = latexEnvironment('multicols*', required='3')
 OliviaTex.addContent(tomeMulticol, setParent=True)
 for i, item in enumerate(myCollection.tomes):
     tikz = latexEnvironment('tikzpicture')
@@ -17,7 +17,8 @@ for i, item in enumerate(myCollection.tomes):
     tomeMulticol.addContent(tikz, setParent=True)
 
 OliviaTex.addContent("\\normalfont\n")
-print(OliviaTex)
-OliviaTex.write()
+#print(OliviaTex)
+#OliviaTex.write()
+OliviaTex.compile()
 
 

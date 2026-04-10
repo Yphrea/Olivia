@@ -1,6 +1,9 @@
+import subprocess as sp
+
 class latexEnvironment:
     indentation = "   "
     def __init__(self, environmentName:str, required:list = None, optional:list = None):
+        """required and optional should be sent as list of strings, like ['option_A=x', 'option_B=y']?"""
         self.environmentName = environmentName
         self.requiredOptions = required
         self.optionalOptions = optional
@@ -8,6 +11,8 @@ class latexEnvironment:
         self.updateEnvironmentStrings()
         
     def updateEnvironmentStrings(self):
+        """Creates begin and end environment code snippets including
+        correctly formatted options."""
         options = {'optional':self.optionalOptions, 'required':self.requiredOptions}
         optional_str = ''; required_str = ''
         for key, option in options.items():
@@ -23,6 +28,7 @@ class latexEnvironment:
         self.end = f"\\end{{{self.environmentName}}}\n"
 
     def addContent(self, addition, setParent=False):
+        """Add content inside this latexEnvironment"""
         if setParent:
             addition.setParent(self)
         if isinstance(addition, list):
@@ -46,8 +52,8 @@ class latexEnvironment:
             ret_str += self.indentation+aux_str
         ret_str += self.end
         return ret_str
-                
-
+    
+    
 class latexDocument(latexEnvironment):
     def __init__(self, documentName:str):
         self.documentName = documentName+'.tex'*('.tex' not in documentName)
@@ -70,6 +76,9 @@ class latexDocument(latexEnvironment):
     def __str__(self):
         return self.documentPreamble + super().__str__()
 
+    def compile(self):
+        self.write()
+        sp.run(["pdflatex", self.documentName])
 
         
             

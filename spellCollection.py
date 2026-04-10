@@ -1,5 +1,6 @@
 import yaml
 from latexWrapper import latexEnvironment as texEnv
+import os
 
 class spellCollection():
     def __init__(self, **kwargs):
@@ -11,8 +12,9 @@ class spellCollection():
         spellClass = None
         if spellType == 'tomes':
             spellClass = tome
-        elif spellType == 'spellpage':
-            spellClass = spellPage
+        elif spellType == 'spellpages':
+            #spellClass = spellPage
+            spellClass = tome
         return [spellClass(**s) for s in spells]
 
     @classmethod
@@ -56,24 +58,29 @@ class tome(spell):
         title = str(props.get("title", "Unknown"))
         title_tex = title.title()
         image_file = 'spell_thumbnails/'+title.replace(" ", "_") + ".png"
+        try:
+            assert os.path.isfile(image_file)
+        except AssertionError:
+            image_file = "spell_thumbnails/make_tea.png"
         
         # Collect property lines (skip title)
         lines = []
-        for key, value in props.items():
-            if key == "title":
+        loopoverKeys = [key for key in list(props.keys()) if key not in ['title', 'description', 'tags']]+['description', 'tags']
+        for key in loopoverKeys:
+            try:
+                value = props[key]
+            except KeyError:
                 continue
-
+            
             # Convert lists nicely
-            if isinstance(value, list):
+            if isinstance(value, list): #why?
                 value = ", ".join(map(str, value))
 
-            # Normalize key formatting
+            # Normalize key formatting; title() capitalizes first letter in word
             key_tex = key.replace("_", " ").title()
+            lines.append(f"\\textbf{{{key_tex}}}: {value}\\\\")
 
-            lines.append(f"{key_tex}: {value}\\\\")
-    
-
-        lines.append("Charges: ")
+        #lines.append("Charges: ")
 
         properties_block = "\n    ".join(lines)
 

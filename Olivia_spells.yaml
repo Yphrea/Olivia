@@ -1,15 +1,185 @@
 tomes:
+  #imbuements
   - title: flickering wood imbuement
-    difficulty: 6
-    mana: 180
+    difficulty: 4
+    mana: '?'
     description: |
       Imbue an orange crystal with the wood element
     tags:
       - wood
-  - title: dim wood imbuement
+
+
+  - title: dim light imbuement
+    difficulty: 2
+    mana: '?'
+    description: |
+      Needs artisan, staves/wands
+    tags:
+    
+   #Other
+  - title: cosmic grace
+    difficulty: -1
+    mana: '?'
+    description: |
+    
+    tags:
+
+  - title: Healing light
+    difficulty: 4
+    mana: '?'
+    description: |
+     Heals some HP
+    tags:
+
+  - title: Star Blessing
+    difficulty: 3
+    mana: '?'
+    description: |
+      Buffs magic effects and damage +30\%, fading 5/turn
+    tags:
+
+  - title: make tea
+    difficulty: 1
+    mana: '?'
+    description: |
+    
+    tags:
+    
+  - title: Star Blast
+    difficulty: '?'
+    mana: '?'
+    description: |
+    
+    tags:
+    
+  - title: Arch Light
+    difficulty: 12
+    mana: '?'
+    description: |
+    
+    tags:
+
+  - title: Horizontal blink
+    difficulty: 8
+    mana: '?'
+    description: |
+    
+    tags:
+
+  - title: mend moderate maceration
+    difficulty: 4
+    mana: 50
+    description: |
+    
+    tags:
+
+  - title: orbit barrier
+    difficulty: 5
+    mana: '?'
+    description: |
+      Create a shield with 200 hp around target
+    tags:
+      - astral
+
+  - title: superheat item
+    difficulty: 6
+    mana: 80
+    description: |
+      Melts ore into ingots
+    tags:
+
+  - title: fireball
+    difficulty: 5
+    mana: 80
+    power: 100
+    accuracy: 6
+    damage: 80
+
+  - title: gale
+    difficulty: '?'
+    mana: 30
+    description: |
+    
+    tags:
+
+  - title: shade
+    difficulty: 2
+    mana: '?'
+    description: |
+      Reduces target priority, 5\% fading over 5 rounds
+    tags:
+      - dark
+      
+  - title: star festival
+    difficulty: too hard
+    mana: '?'
+    description: |
+    
+    tags:
+    
+  - title: shadow fist
+    difficulty: 5
+    mana: 30
+    description: |
+      Punches target 4 times for 20 damage
+    damage: $4 \times 20$
+    range: short
+    tags:
+
+  - title: make snow
+    difficulty: 1
+    mana: '?'
+    description: |
+    
+    tags:
+
+  - title: conjure water
+    difficulty: 1
+    mana: '?'
+    description: |
+    
+    tags:
+
+  - title: dazzle
+    difficulty: '?'
+    mana: '?'
+    description: |
+    
+    tags:
+
+  - title: dark bolt
+    difficulty: '?'
+    mana: '?'
+    description: |
+    
+    tags:
+
+  - title: Illusion ladder
+    difficulty: '?'
+    mana: '?'
+    description: |
+    
+    tags:
+    
+  - title: confuse ray
+    difficulty: '?'
+    mana: '?'
+    description: |
+    
+    tags:
+
+  - title: Overheal
+    difficulty: 5
+    mana: 60
+    description: |
+       Heals up to 40 hp
+    tags:
+
+spellpages:
+  - title: dim water imbuement
     difficulty: 2
     mana: 30
     description: |
-      Imbue a red crystal with the wood element
+      Imbue a red crystal with the water element
     tags:
-      - wood
+      - water

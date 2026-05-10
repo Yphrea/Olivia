@@ -254,7 +254,7 @@ spellpages:
     tags:
       - wood
 
-  - title: Astral Berrage
+  - title: Astral Barrage
     difficulty: 7
     mana: 700
     range: far
@@ -279,7 +279,7 @@ spellpages:
     tags:
       - electric
 
-  - title: Lycky star
+  - title: Lucky star
     difficulty: 3
     mana: 20
     damage: $5 \times \mathrm{d}20$

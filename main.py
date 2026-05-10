@@ -1,4 +1,4 @@
-from spellCollection import spellCollection
+from spellCollection import spellCollection, imbuementLevels
 from latexWrapper import *
 
 myCollection = spellCollection.from_yaml("Olivia_spells.yaml")
@@ -8,28 +8,51 @@ myCollection = spellCollection.from_yaml("Olivia_spells.yaml")
 
 OliviaTex = latexDocument('Olivia.tex')
 
+subsections = ['Heal', 'Mend', 'Imbuements', 'Other']
 #Tomes section
 OliviaTex.addContent("""\\section*{Tomes}\n
 \\scriptsize\n""")
 tomeMulticol = latexEnvironment('multicols*', required='3')
 OliviaTex.addContent(tomeMulticol, setParent=True)
-for i, item in enumerate(myCollection.tomes):
-    tikz = latexEnvironment('tikzpicture')
-    tikz.addContent(item.toTikz())
-    tomeMulticol.addContent(tikz, setParent=True)
-
+for subsection in subsections:
+    #OliviaTex.addContent(f"""\\subsection*{{{subsection}}}\n
+    #\\scriptsize\n""")
+    subsectionSpells = myCollection.get('tomes', subsection)
+    print(subsectionSpells)
+    if 'imbuement' in subsection.lower():
+        types = [imbuement.spellSpecs['title'].split()[1].lower() for imbuement in subsectionSpells]
+        subsectionSpells.sort(key = lambda x:imbuementLevels.index(x.spellSpecs['title'].split()[0].lower()))
+        subsectionSpells.sort(key = lambda x:types.index(x.spellSpecs['title'].split()[1].lower()))
+    elif 'other' in subsection.lower():
+        subsectionSpells = myCollection.get('tomes', 'remaining')
+    for i, item in enumerate(subsectionSpells):
+        tikz = latexEnvironment('tikzpicture')
+        tikz.addContent(item.toTikz())
+        tomeMulticol.addContent(tikz, setParent=True)
 OliviaTex.addContent("\\normalfont\n")
 
+#OliviaTex.compile()
+#exit()
+
 #Spellpages section
-OliviaTex.addContent("""\\section*{spellpages}\n
+OliviaTex.addContent("""\\section*{Spellpages}\n
 \\scriptsize\n""")
 tomeMulticol = latexEnvironment('multicols*', required='3')
 OliviaTex.addContent(tomeMulticol, setParent=True)
-for i, item in enumerate(myCollection.spellpages):
-    tikz = latexEnvironment('tikzpicture')
-    tikz.addContent(item.toTikz())
-    tomeMulticol.addContent(tikz, setParent=True)
-
+for subsection in subsections:
+    subsectionSpells = myCollection.get('spellpages', subsection)
+    print(subsectionSpells)
+    if 'imbuement' in subsection.lower():
+        types = [imbuement.spellSpecs['title'].split()[1].lower() for imbuement in subsectionSpells]
+        subsectionSpells.sort(key = lambda x:imbuementLevels.index(x.spellSpecs['title'].split()[0].lower()))
+        subsectionSpells.sort(key = lambda x:types.index(x.spellSpecs['title'].split()[1].lower()))
+    elif 'other' in subsection.lower():
+        subsectionSpells = myCollection.get('spellpages', 'remaining')
+    for i, item in enumerate(subsectionSpells):
+        tikz = latexEnvironment('tikzpicture')
+        tikz.addContent(item.toTikz())
+        tomeMulticol.addContent(tikz, setParent=True)
+        
 OliviaTex.addContent("\\normalfont\n")
 
 

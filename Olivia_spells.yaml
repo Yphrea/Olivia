@@ -8,7 +8,6 @@ tomes:
     tags:
       - wood
 
-
   - title: dim light imbuement
     difficulty: 2
     mana: '?'
@@ -66,7 +65,7 @@ tomes:
     
     tags:
 
-  - title: mend moderate maceration
+  - title: mend moderate laceration
     difficulty: 4
     mana: 50
     description: |
@@ -181,6 +180,14 @@ tomes:
        Heals up to 40 hp
     tags:
 
+  - title: Blinding darkness
+    difficulty: 4 or 5
+    mana: '?'
+    description: |
+       
+    tags:
+      - dark (100)
+
 spellpages:
   - title: dim water imbuement
     difficulty: 2
@@ -234,6 +241,29 @@ spellpages:
     description: |
     
     tags:
+
+  - title: Shining earth imbuement
+    difficulty: 6
+    mana: '?'
+    description: |
+    
+    tags:
+      - earth(100)
+
+  - title: Conjure snow
+    difficulty: 1
+    mana: 50
+    description: |
+       Create a bucketworth of snow
+    tags:
+
+  - title: Shadow melt
+    difficulty: a lot
+    mana: '?'
+    description: |
+    
+    tags:
+      - dark(100)
 
   - title: Seiken
     difficulty: 5

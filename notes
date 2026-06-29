@@ -1,0 +1,78 @@
+# Magic Charm, Rabbit Foot
+- A magic charm made with the foot of a rabbit.
+Rarity: Common
+Type: Trinket
+Slot: Token
+Attributes: Version(3.9)
+Passive: +1 Evade. +1 Elusiveness.
+Passive: +50% Dispel, Doom, Embargo, and Misfortune Resistance.
+
+# Starblast
+- A starry explosion which hits a group of targets but is strongest in the centre.
+Range: Long
+Attributes: Astral(100), Mana(100), Difficulty(6)
+Active: Attack a target with 100 Power, 100 Damage, and 12 Accuracy, with all other subtargets in the tile being attacked with 60 Power, 20 Damage, 15 Accuracy.
+
+# Thunder
+Range: Long
+Attributes: Electricity(100), Mana(360), Difficulty(8)
+Active: Create a thundrous cloud 1 Altitude above the targeted tile which strikes the tile below d9-randomly with three lightning bolts. 120 Power, 100 Damage, 14 Accuracy. This attack does not benefit from proximity.
+
+# Thunderstorm
+Range: Very Long
+Attributes: Electricity(100), Kinetic(50), Mana(2500), Difficulty(11)
+Active: Create thundrous clouds 1 Altitude above the targeted tile and its adjacent tiles, all of which strike the tile below d9-randomly with six lightning bolts for the middle tile and three for the adjacent tiles. 120 Power, 100 Damage, 14 Accuracy. This attack does not benefit from proximity. After the lighting has struck, the wind speed is increased by 6 up to 15.
+
+# Gale
+Range: Long
+Attributes: Mana(30), Difficulty(4), Kinetic(100), Version(3.9))
+Active: Project a powerful gale of wind. 20 Power, 40 Damage, 15 Accuracy. If it hits with at least 100% efficiency, displace the target by 1 tile away in the direction of the projectile if it is overpowered.
+
+# Dazzle
+Range: Medium
+Attributes: Light(100), Mana(20), Difficulty(3)
+Active: Assault the target's means of optical information-gathering with strong light, inflicting a -10*EFF penalty of accuracy and evade for 2 turns. 15 Accuracy.
+
+# Dark Bolt
+Range: Medium
+Attributes: Dark(100), Mana(25), Difficulty(4)
+Active: Throw a fist-sized bolt of darkness. Single-target. 50 Power, 40 Damage, 10 Accuracy.
+
+# Illusion Ladder
+Range: Close
+Attributes: Mana(150), Difficulty(3), Illusion(100), Version(3.9)
+Active: Create a ladder on a surface against a wall. It remains in place for 10 turns. If the surface or wall disappears, the ladder does as well.
+
+# Star Festival
+Attributes: Mana(500), Difficulty(9), Astral(100), Version(3.9)
+Active: Restore 15 Health and 30 Lucidity to all non-enemies within Short range and apply a fading +40% Magic Damage and +40% Magic Effect buff, up to +60%, and a fading +4 Accuracy, Evade, Breakthrough, Block, and Parry buff, up to +8, to them.
+Active(Elmira Circle): Restore 25 Health, 50 Lucidity, and 100 Mana to all non-enemies within horizontal-Medium and vertical-Short range and apply a fading +40% Magic Damage, Magic Effect, and Magic Armour buff, up to +60%, and a fading +4 Accuracy, Evade, Breakthrough, Block, and Parry buff, up to +8, to them. This consumes the circle.
+
+# Confuse Ray
+Range: Medium
+Attributes: Illusion(100), Mana(50), Difficulty(3), Version(3.9)
+Active: Shoot a ray to confuse the target with 10 Accuracy. It has a 100%*EFF chance to inflict Confusion for 2 turns.
+
+# Blinding Darkness
+Range: Medium
+Attributes: Dark(100), Mana(60), Difficulty(4), Version(3.9)
+Active: Project a sudden cloud of intense darkness at a target with 11 Accuracy. If the optical sensors of the target are hit then this attack has a 100%*EFF chance of inflicting Blindness for 2*EFF turns, rounded down but not to less than 1.
+
+# Shadow Melt
+Attributes: Mana(90), Difficulty(10), Dark(100), Illusion(50), Version(3.9)
+Active: Melt into your shadow, becoming intangible but inanimate until the start of your third next turn. You may take a move action to exit the shadow early. You also exit early if the surface on which your shadow is located disappears.
+
+# Mend Severe Laceration
+- An advanced mending spell which closes skin and reattaches ruptured veins.
+Attributes: Difficulty(8), Mana(200), Blood(100), Light(50), Version(3.9)
+Active: Mend a laceration injury up to severe of a target at close range, removing the injury and reducing the target's lucidity by 60.
+
+# Cosmic Grace
+Attributes: Astral(100), Mana(60), Difficulty(5), Version(3.9)
+Active: Apply a fading +4 Accuracy, Breakthrough, Evade, Block, and Parry buff, up to +6, to all non-enemies on your tile.
+
+# Tulip Bouquet
+Attributes: Mana(160), Difficulty(3), Wood(100), Version(3.9)
+Active: Create a bouquet of 10 tulips.
+
+

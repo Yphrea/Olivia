@@ -16,12 +16,13 @@ tomes:
     tags:
     
    #Other
-  - title: cosmic grace
-    difficulty: -1
-    mana: '?'
+  - title: Cosmic grace
+    difficulty: 5
+    mana: 60
     description: |
-    
+      Apply a fading +4 Accuracy, Breakthrough, Evade, Block, and Parry buff, up to +6, to all non-enemies on your tile.
     tags:
+      - astral(100)
 
   - title: Healing light
     difficulty: 4
@@ -45,7 +46,7 @@ tomes:
     tags:
     
   - title: Star Blast
-    difficulty: '?'
+    difficulty: 100
     mana: '?'
     description: |
     
@@ -95,11 +96,13 @@ tomes:
     damage: 80
 
   - title: gale
-    difficulty: '?'
+    difficulty: 4
     mana: 30
+    range: long
     description: |
-    
+      Project a powerful gale of wind. 20 Power, 40 Damage, 15 Accuracy. If it hits with at least 100% efficiency, displace the target by 1 tile away in the direction of the projectile if it is overpowered.
     tags:
+      - kinetic (100)
 
   - title: shade
     difficulty: 2
@@ -110,11 +113,13 @@ tomes:
       - dark
       
   - title: star festival
-    difficulty: too hard
-    mana: '?'
+    difficulty: 9
+    mana: 500
     description: |
-    
+      Restore 15 Health and 30 Lucidity to all non-enemies within Short range and apply a fading +40% Magic Damage and +40% Magic Effect buff, up to +60%, and a fading +4 Accuracy, Evade, Breakthrough, Block, and Parry buff, up to +8, to them.
+#Active(Elmira Circle): Restore 25 Health, 50 Lucidity, and 100 Mana to all non-enemies within horizontal-Medium and vertical-Short range and apply a fading +40% Magic Damage, Magic Effect, and Magic Armour buff, up to +60%, and a fading +4 Accuracy, Evade, Breakthrough, Block, and Parry buff, up to +8, to them. This consumes the circle.
     tags:
+      - astral(100)
     
   - title: shadow fist
     difficulty: 5
@@ -146,32 +151,40 @@ tomes:
     tags:
 
   - title: dazzle
-    difficulty: '?'
-    mana: '?'
+    difficulty: 3
+    mana: 20
+    range: medium
     description: |
-    
+      Assault the target's means of optical information-gathering with strong light, inflicting a -10*EFF penalty of accuracy and evade for 2 turns. 15 Accuracy.
     tags:
+      - light(100)
 
   - title: dark bolt
-    difficulty: '?'
-    mana: '?'
+    difficulty: 4
+    mana: 25
+    range: medium
     description: |
-    
+      Throw a fist-sized bolt of darkness. Single-target. 50 Power, 40 Damage, 10 Accuracy.
     tags:
+      - dark(100)
 
   - title: Illusion ladder
-    difficulty: '?'
-    mana: '?'
+    difficulty: 3
+    mana: 150
+    range: close
     description: |
-    
+      Create a ladder on a surface against a wall. It remains in place for 10 turns. If the surface or wall disappears, the ladder does as well.  
     tags:
+      - illusion(100)
     
   - title: confuse ray
-    difficulty: '?'
-    mana: '?'
+    difficulty: 3
+    mana: 50
+    range: medium
     description: |
-    
+      Shoot a ray to confuse the target with 10 Accuracy. It has a 100%*EFF chance to inflict Confusion for 2 turns.
     tags:
+      - Illusion(100)
 
   - title: Overheal
     difficulty: 5
@@ -181,10 +194,10 @@ tomes:
     tags:
 
   - title: Blinding darkness
-    difficulty: 4 or 5
-    mana: '?'
+    difficulty: 4
+    mana: 60
     description: |
-       
+       Project a sudden cloud of intense darkness at a target with 11 Accuracy. If the optical sensors of the target are hit then this attack has a 100%*EFF chance of inflicting Blindness for 2*EFF turns, rounded down but not to less than 1.
     tags:
       - dark (100)
 
@@ -228,23 +241,25 @@ spellpages:
     tags:
       - light
 
-  - title: Confuse Ray
+  - title: confuse ray
     difficulty: 3
     mana: 50
+    range: medium
     description: |
-       Targeted creature chooses their target on random/proximity ('?')
+      Shoot a ray to confuse the target with 10 Accuracy. It has a 100%*EFF chance to inflict Confusion for 2 turns.
     tags:
+      - Illusion(100)
 
   - title: Shining blood imbuement
     difficulty: 6
-    mana: '?'
+    mana: 100
     description: |
     
     tags:
 
   - title: Shining earth imbuement
     difficulty: 6
-    mana: '?'
+    mana: 100
     description: |
     
     tags:
@@ -258,12 +273,13 @@ spellpages:
     tags:
 
   - title: Shadow melt
-    difficulty: a lot
-    mana: '?'
+    difficulty: 10
+    mana: 90
     description: |
-    
+      Melt into your shadow, becoming intangible but inanimate until the start of your third next turn. You may take a move action to exit the shadow early. You also exit early if the surface on which your shadow is located disappears.
     tags:
       - dark(100)
+      - illusion(50)
 
   - title: Seiken
     difficulty: 5
@@ -294,18 +310,20 @@ spellpages:
       - astral
 
   - title: Mend severe laceration
-    difficulty: too hard
-    mana: '?'
+    difficulty: 8
+    mana: 200
     description: |
-    
+      Mend a laceration injury up to severe of a target at close range, removing the injury and reducing the target's lucidity by 60.
     tags:
+      - blood(100)
+      - light(50)
 
   - title: Thunder
     difficulty: 8
     mana: 360
     range: long
     description: |
-      Thunder cloud emitts three lightning bolts at random targets ('?')
+      Thunder cloud emitts three lightning bolts at random targets (100)
     tags:
       - electric
 
@@ -329,18 +347,20 @@ spellpages:
     tags:
 
   - title: Tulip bouqet
-    difficulty: 1('?')
-    mana: '?'
+    difficulty: 3
+    mana: 160
     description: |
-      Conjures a bouqet of tulips
+      Create a bouquet of 10 tulips.
     tags:
+      - wood(100)
 
   - title: Cosmic grace
     difficulty: 5
     mana: 60
     description: |
-      Buffs allies in tile
+      Apply a fading +4 Accuracy, Breakthrough, Evade, Block, and Parry buff, up to +6, to all non-enemies on your tile.
     tags:
+      - astral(100)
 
   - title: Arcane missile
     difficulty: 4
@@ -402,7 +422,7 @@ spellpages:
 
   - title: Flickering astral imbuement
     difficulty: 4
-    mana: '?'
+    mana: 100
     description: |
       Imbues an orange crystal with the astral element
     tags:
@@ -418,7 +438,7 @@ spellpages:
 
   - title: dim water imbuement
     difficulty: 2
-    mana: '?'
+    mana: 100
     description: |
       Imbues a red crystal with the element of water
     tags:

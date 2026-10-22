@@ -1,4 +1,4 @@
-spellpages:
+spellpage:
   - title: Heal
   - title: Mend Moderate Laceration
   - title: Mend Moderate Fracture
@@ -27,7 +27,7 @@ spellpages:
   - title: Conjure Water
   - title: Illusion Stream
 
-tomes:
+tome:
   - title: Healing Light
   - title: Overheal
   - title: Mend Moderate Laceration

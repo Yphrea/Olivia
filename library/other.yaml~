@@ -1,21 +1,4 @@
-tomes:
-  #imbuements
-  - title: flickering wood imbuement
-    difficulty: 4
-    mana: '?'
-    description: |
-      Imbue an orange crystal with the wood element
-    tags:
-      - wood
-
-  - title: dim light imbuement
-    difficulty: 2
-    mana: '?'
-    description: |
-      Needs artisan, staves/wands
-    tags:
-    
-   #Other
+spell:
   - title: Cosmic grace
     difficulty: 5
     mana: 60
@@ -23,13 +6,6 @@ tomes:
       Apply a fading +4 Accuracy, Breakthrough, Evade, Block, and Parry buff, up to +6, to all non-enemies on your tile.
     tags:
       - astral(100)
-
-  - title: Healing light
-    difficulty: 4
-    mana: '?'
-    description: |
-     Heals some HP
-    tags:
 
   - title: Star Blessing
     difficulty: 3
@@ -62,13 +38,6 @@ tomes:
   - title: Horizontal blink
     difficulty: 8
     mana: '?'
-    description: |
-    
-    tags:
-
-  - title: mend moderate laceration
-    difficulty: 4
-    mana: 50
     description: |
     
     tags:
@@ -186,13 +155,6 @@ tomes:
     tags:
       - Illusion(100)
 
-  - title: Overheal
-    difficulty: 5
-    mana: 60
-    description: |
-       Heals up to 40 hp
-    tags:
-
   - title: Blinding darkness
     difficulty: 4
     mana: 60
@@ -200,15 +162,6 @@ tomes:
        Project a sudden cloud of intense darkness at a target with 11 Accuracy. If the optical sensors of the target are hit then this attack has a 100\%*EFF chance of inflicting Blindness for 2*EFF turns, rounded down but not to less than 1.
     tags:
       - dark (100)
-
-spellpages:
-  - title: dim water imbuement
-    difficulty: 2
-    mana: 30
-    description: |
-      Imbue a red crystal with the water element
-    tags:
-      - water
 
   - title: illusion bullet
     difficulty: 1
@@ -250,21 +203,6 @@ spellpages:
     tags:
       - Illusion(100)
 
-  - title: Shining blood imbuement
-    difficulty: 6
-    mana: 100
-    description: |
-    
-    tags:
-
-  - title: Shining earth imbuement
-    difficulty: 6
-    mana: 100
-    description: |
-    
-    tags:
-      - earth(100)
-
   - title: Conjure snow
     difficulty: 1
     mana: 50
@@ -292,14 +230,6 @@ spellpages:
     tags:
      - light
 
-  - title: Shining wood imbuement
-    difficulty: 6
-    mana: 
-    description: |
-       Imbues a yellow crystal with the element of wood
-    tags:
-      - wood
-
   - title: Astral Barrage
     difficulty: 7
     mana: 700
@@ -308,15 +238,6 @@ spellpages:
       Showers every target in targeted tile for 100 HP
     tags:
       - astral
-
-  - title: Mend severe laceration
-    difficulty: 8
-    mana: 200
-    description: |
-      Mend a laceration injury up to severe of a target at close range, removing the injury and reducing the target's lucidity by 60.
-    tags:
-      - blood(100)
-      - light(50)
 
   - title: Thunder
     difficulty: 8
@@ -382,13 +303,6 @@ spellpages:
     tags:
       - water
 
-  - title: Dim ice imbuement
-    difficulty: 2
-    mana: 20
-    description: |
-      Imbues a red crystal with the element of ice
-    tags:
-
   - title: Erase color
     difficulty: 5
     mana: 90
@@ -403,54 +317,7 @@ spellpages:
     description: |
       Conjures one litre of water
     tags:
-
-  - title: Shining dark imbuement
-    difficulty: 6
-    mana: 180
-    description: |
-      Imbues a yellow crystal with the element of darkness
-    tags:
-      - dark
       
-  - title: Shining astral imbuement
-    difficulty: 6
-    mana: 180
-    description: |
-      Imbues a yellow crystal with the astral element
-    tags:
-      - astral
-
-  - title: Flickering astral imbuement
-    difficulty: 4
-    mana: 100
-    description: |
-      Imbues an orange crystal with the astral element
-    tags:
-      - astral
-
-  - title: Shining electric imbuement
-    difficulty: 6
-    mana: 180
-    description: |
-      Imbues a yellow crystal with the element of electricity
-    tags:
-      - electric
-
-  - title: dim water imbuement
-    difficulty: 2
-    mana: 100
-    description: |
-      Imbues a red crystal with the element of water
-    tags:
-      - water
-      
-  - title: Mend moderate laceration
-    difficulty: 4
-    mana: 50
-    description: |
-      
-    tags:
-
   - title: Dark wave
     difficulty: 10
     description: |
@@ -468,17 +335,6 @@ spellpages:
       Sends 4 illusion bullets at target
     tags:
       - illusion
-
-  - title: Mend moderate fracture
-    difficulty: 4
-    mana: 50
-    range: close
-    heal: 20 lu
-    description: |
-      Heal minor and moderate bone injury
-    tags:
-      - blood (100)
-      - light (50)
 
   - title: Illusory chain
     difficulty: 9
@@ -501,15 +357,5 @@ spellpages:
     tags:
       - electricity (100)
       - kinetic (50)
-
-  - title: Heal
-    difficulty: 3
-    mana: 30
-    range: close
-    description: |
-      Heals target for 30 hp
-    tags:
-      - blood
-
 
 

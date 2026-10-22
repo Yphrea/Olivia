@@ -1,8 +1,44 @@
 from spellCollection import spellCollection, imbuementLevels
 from latexWrapper import *
 
-myCollection = spellCollection.from_yaml("Olivia_spells.yaml")
+myCollection = spellCollection.from_yaml("spellbook.yaml")
+OliviaCollection = spellCollection.from_yaml("Olivia_spells.yaml")
 
+#for sType in spellCollection.spellTypes:
+#    spells = getattr(OliviaCollection, sType)
+
+#    for i, spell in enumerate(spells):
+#        spells[i] = myCollection.findInCollection(
+#            title=spell.spellSpecs['title']
+#        )
+
+#    print(f"{sType}: {getattr(OliviaCollection, sType)}")
+
+#print("After loop:")
+#print("tomes:", OliviaCollection.tomes)
+#print("spellpages:", OliviaCollection.spellpages)
+#exit()
+
+for key,spells in OliviaCollection.spellSpecs.items():
+    print(key)
+    for spell in spells:
+        print('\t', spell)
+
+for sType in spellCollection.spellTypes:
+    spells = getattr(OliviaCollection, sType)
+    for i, spell in enumerate(spells):
+        fullspell = myCollection.findInCollection(title=spell.spellSpecs['title'])
+        if fullspell:
+            spells[i] = fullspell
+
+    setattr(OliviaCollection, sType, spells)
+    OliviaCollection.spellSpecs[sType] = spells
+for key,spells in OliviaCollection.spellSpecs.items():
+    print(key)
+    for spell in spells:
+        print('\t', spell)
+
+myCollection = OliviaCollection
 #for entry in myCollection.get('tomes'):
 #    if type(entry.spellSpecs['difficulty']) == type('hej'):
 #        try:
@@ -50,7 +86,11 @@ OliviaTex.addContent(tomeMulticol, setParent=True)
 for subsection in subsections:
     subsectionSpells = myCollection.get('spellpages', subsection)
     print("hej")
-    for spell in subsectionSpells:
+    for s, spell in enumerate(subsectionSpells):
+        try:
+            spell.spellSpecs['difficulty']
+        except KeyError:
+            subsectionSpells[s].spellSpecs['difficulty'] = -1
         print(spell.spellSpecs['title'], spell.spellSpecs['difficulty'])
     subsectionSpells.sort(key = lambda x: x.spellSpecs['difficulty'])
     if 'imbuement' in subsection.lower():

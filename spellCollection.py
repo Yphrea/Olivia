@@ -3,8 +3,12 @@ from latexWrapper import latexEnvironment as texEnv
 import os
 
 imbuementLevels = ['dim', 'flickering', 'shining']
+spellTypes = ['tomes', 'spellpages']
 
 class spellCollection():
+    
+    spellTypes = ['tomes', 'spellpages']
+    
     def __init__(self, **kwargs):
         self.spellSpecs = dict(kwargs)
         for spellType, spells in self.spellSpecs.items():
@@ -30,7 +34,6 @@ class spellCollection():
                     for prevReq in self.previouslyRequested:
                         print('\t', prevReq)
                         if spell is prevReq:
-                            print("hej")
                             addSpell = False
                             break
                     if addSpell:
@@ -49,6 +52,28 @@ class spellCollection():
             aux = []
         self.previouslyRequested += targetSpells
         return targetSpells
+
+    def findInCollection(self, title, spellType=None):
+        
+        if spellType: #check for spell including spelltype
+            targetSpells = [spell for spell in getattr(self, spellType)]
+        else: #Check for spell disregarding spelltype
+            targetSpells = []
+            for sType in self.spellSpecs.keys():
+                targetSpells += [spell for spell in getattr(self, sType)]
+
+        returns = []
+        for spell in targetSpells:
+            if title.lower() == spell.spellSpecs['title'].lower():
+                returns.append(spell)
+
+        #assert len(returns) <= 1
+        try:
+            return returns [0]
+        except IndexError:
+            return False
+
+                
     
     @classmethod
     def from_yaml(cls, file_path):
@@ -58,6 +83,9 @@ class spellCollection():
 
     def __repr__(self):
         return f"{self.__class__.__name__}(spellSpecs={dict(self.spellSpecs)})"
+
+    def __iter__(self):
+        return iter([getattr(self, key) for key in spellTypes])
 
     
 class spell:

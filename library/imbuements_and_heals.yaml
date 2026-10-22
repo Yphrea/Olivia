@@ -1,0 +1,145 @@
+imbuement:
+  - title: dim _ imbuement
+    difficulty: 2
+    mana: 30
+    description: |
+      Imbue a red crystal with the element of _
+    tags:
+
+  - title: flickering _ imbuement
+    difficulty: 4
+    mana: 100
+    description: |
+      Imbue an orange crystal with the element of _
+    tags:
+
+  - title: shining _ imbuement
+    difficulty: 6
+    mana: 180
+    description: |
+      Imbue a yellow crystal with the element of _
+    tags:
+
+heal:
+  - title: Healing light
+    difficulty: 4
+    mana: '?'
+    description: |
+     Heals some HP
+    tags:
+
+  - title: Heal
+    difficulty: 3
+    mana: 30
+    range: close
+    description: |
+      Heals target for 30 hp
+    tags:
+      - blood
+
+  - title: Overheal
+    difficulty: 5
+    mana: 60
+    description: |
+       Heals up to 40 hp
+    tags:
+
+  - title: mend minor laceration
+    difficulty: 2
+    mana: -1
+    description: |
+      Mend a minor laceration injury.
+    tags:
+      - blood(100)
+      - light(50)
+
+  - title: mend moderate laceration
+    difficulty: 4
+    mana: 50
+    description: |
+      Mend a moderate or lesser laceration injury.
+    tags:
+      - blood(100)
+      - light(50)
+
+  - title: Mend serious laceration
+    difficulty: 6
+    mana: -1
+    description: |
+      Mend a serious or lesser laceration injury.
+    tags:
+      - blood(100)
+      - light(50)
+      
+  - title: Mend severe laceration
+    difficulty: 8
+    mana: 200
+    description: |
+      Mend a severe or lesser laceration injury, removing the injury and reducing the target's lucidity by 60.
+    tags:
+      - blood(100)
+      - light(50)
+
+  - title: Mend terminal laceration
+    difficulty: 10
+    mana: -1
+    description: |
+      Mend a terminal or lesser laceration injury.
+    tags:
+      - blood(100)
+      - light(50)
+
+  - title: Mend minor fracture
+    difficulty: 2
+    mana: -1
+    range: close
+    heal: 20 lu
+    description: |
+      Mend a minor fracture
+    tags:
+      - blood (100)
+      - light (50)
+      
+  - title: Mend moderate fracture
+    difficulty: 4
+    mana: 50
+    range: close
+    heal: 20 lu
+    description: |
+      Mend a moderate or lesser fracture
+    tags:
+      - blood (100)
+      - light (50)
+
+  - title: Mend serious fracture
+    difficulty: 6
+    mana: -1
+    range: close
+    heal: 20 lu
+    description: |
+      Mend a serious or lesser fracture
+    tags:
+      - blood (100)
+      - light (50)
+
+  - title: Mend severe fracture
+    difficulty: 8
+    mana: 200
+    range: close
+    heal: 20 lu ('?')
+    description: |
+      Mend a severe or lesser fracture
+    tags:
+      - blood (100)
+      - light (50)
+      
+  - title: Mend terminal fracture
+    difficulty: 10
+    mana: -1
+    range: close
+    heal: 20 lu
+    description: |
+      Mend a terminal or lesser fracture
+    tags:
+      - blood (100)
+      - light (50)

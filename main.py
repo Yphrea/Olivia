@@ -1,29 +1,26 @@
-from spellCollection import spellCollection, imbuementLevels
+#from spellCollection import spellCollection, imbuementLevels
+
+from spellLibrary import spellLibrary, masterLibrary, spellCollection
 from latexWrapper import *
 
-myCollection = spellCollection.from_yaml("spellbook.yaml")
+#myCollection = spellCollection.from_yaml("spellbook.yaml")
+Libraries = []
+LibraryPaths = ["library/imbuements_and_heals.yaml", "library/other.yaml"]
+for path in LibraryPaths:
+    Libraries.append(masterLibrary.from_yaml(path))
+completeLibrary = spellLibrary.joinLibraries(Libraries)
+
+completeLibrary.print()
+exit()
+
 OliviaCollection = spellCollection.from_yaml("Olivia_spells.yaml")
 
-#for sType in spellCollection.spellTypes:
-#    spells = getattr(OliviaCollection, sType)
-
-#    for i, spell in enumerate(spells):
-#        spells[i] = myCollection.findInCollection(
-#            title=spell.spellSpecs['title']
-#        )
-
-#    print(f"{sType}: {getattr(OliviaCollection, sType)}")
-
-#print("After loop:")
-#print("tomes:", OliviaCollection.tomes)
-#print("spellpages:", OliviaCollection.spellpages)
-#exit()
-
-for key,spells in OliviaCollection.spellSpecs.items():
+for key,spells in OliviaCollection._libraryContent.items():
     print(key)
     for spell in spells:
         print('\t', spell)
 
+exit()
 for sType in spellCollection.spellTypes:
     spells = getattr(OliviaCollection, sType)
     for i, spell in enumerate(spells):
@@ -38,16 +35,8 @@ for key,spells in OliviaCollection.spellSpecs.items():
     for spell in spells:
         print('\t', spell)
 
+exit()
 myCollection = OliviaCollection
-#for entry in myCollection.get('tomes'):
-#    if type(entry.spellSpecs['difficulty']) == type('hej'):
-#        try:
-#            print(entry.spellSpecs['title'], entry.spellSpecs['description'])
-#        except:
-#            print(entry.spellSpecs['title'])
-
-#for i, item in enumerate(myCollection.tomes):
-#    print(item.to_tikz())
 
 OliviaTex = latexDocument('Olivia.tex')
 

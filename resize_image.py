@@ -16,7 +16,7 @@ def make_thumbnail(image_file: str) -> Image.Image:
             img = img.crop((left, top, right, bottom))
 
         # Resize to 254x254
-        img = img.resize((254, 254), Image.Resampling.LANCZOS)
+        img = img.resize((254, 254), Image.LANCZOS)
 
         return img.copy()  # return a standalone image
 

@@ -1,0 +1,64 @@
+import re
+
+def convert(text):
+    title = re.search(r'^#\s*#?\s*(.+)', text, re.M).group(1).strip()
+
+    props = {}
+    attrs = {}
+
+    for line in text.splitlines():
+        if ':' not in line:
+            continue
+
+        key, value = line.split(':', 1)
+        key, value = key.strip(), value.strip()
+
+        if key == 'Attributes':
+            attrs = dict(re.findall(r'(\w+)\(([^)]*)\)', value))
+        elif key == 'Active':
+            props['Description'] = value
+        elif key not in ('Version',):
+            props[key] = value
+
+    result = [f"title: {title}"]
+
+    for key in ('difficulty', 'mana'):
+        value = next(
+            (v for k, v in attrs.items() if k.lower() == key),
+            None
+        )
+        if value is not None:
+            result.append(f"{key}: {value}")
+
+    for key, value in props.items():
+        if key != 'Description':
+            result.append(f"{key}: {value}")
+
+    if 'Description' in props:
+        result.append("Description: |\n      " + props['Description'])
+
+    tags = [
+        f"{key}({value})"
+        for key, value in attrs.items()
+        if key.lower() not in ('mana', 'difficulty', 'version')
+    ]
+
+    if tags:
+        result.append("tags:\n" + "\n".join(f"      - {tag}" for tag in tags))
+
+    result[0] = "  - "+result[0]
+    return "\n    ".join(result)
+
+str = ""
+with open('notes') as fil:
+    for line in fil:
+        if '#' in line and str:
+            print(convert(str))
+            print()
+            str = line
+            continue
+        str += line
+    
+    print(convert(str))
+    print()
+        

@@ -27,7 +27,7 @@ class spellLibrary():
         duplicatedTitles = titles
         for title in set(titles):
             duplicatedTitles.remove(title)
-        assert len(duplicatedTitles) == 0, "There are duplicated spells in your library."
+        assert len(duplicatedTitles) == 0, f"There are duplicated spells in your library: {duplicatedTitles}"
     
     def __iter__(self):
         return iter(self.librarySpells)
